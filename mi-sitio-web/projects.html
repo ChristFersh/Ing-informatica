@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos de Christian Diaz publicados en GitHub.">
+    <title>Proyectos | Christian Diaz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Christian<span class="highlight">.</span>Diaz</a>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="projects.html" class="active">Proyectos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro">
+                <iconify-icon id="theme-icon" icon="fluent:weather-moon-24-regular" aria-hidden="true"></iconify-icon>
+            </button>
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <iconify-icon id="menu-icon" icon="fluent:navigation-24-regular" aria-hidden="true"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Mis proyectos</h1>
+            <p>Trabajos publicados en mi GitHub. Usa los botones para filtrarlos por tipo.</p>
+        </section>
+
+        <section class="all-projects">
+            <h2 class="section-title">Todos los proyectos</h2>
+
+            <!-- Botones de filtro: JavaScript lee el atributo data-filter -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+                <button class="filter-btn" type="button" data-filter="web">Web</button>
+                <button class="filter-btn" type="button" data-filter="backend">Backend</button>
+                <button class="filter-btn" type="button" data-filter="sistemas">Sistemas (C)</button>
+            </div>
+
+            <!-- Cada tarjeta indica su tipo en data-category -->
+            <div class="projects-grid">
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="img/infect-cozy.webp" alt="Portada del modpack Infect Cozy: aldea de Minecraft infectada de noche" width="900" height="502">
+                    </div>
+                    <div class="project-info">
+                        <h3>Infect Cozy</h3>
+                        <p>Modpack de terror para Minecraft con su propia página web: descargas, novedades y guía de juego. Los jugadores reciben las actualizaciones solos al abrir el juego.</p>
+                        <ul class="tags">
+                            <li>React</li>
+                            <li>Vite</li>
+                            <li>Python</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://christfersh.github.io/infectcozy-pack/" class="btn small" target="_blank" rel="noopener"><iconify-icon icon="fluent:open-24-regular" aria-hidden="true"></iconify-icon> Ver sitio web</a>
+                            <a href="https://github.com/ChristFersh/infectcozy-pack" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="img/smile-school.jpg" class="img-top" alt="Página de inicio de Smile School con el título Get schooled" width="800" height="600">
+                    </div>
+                    <div class="project-info">
+                        <h3>Smile School</h3>
+                        <p>Sitio de tres páginas (inicio, cursos y precios) maquetado con Bootstrap a partir de un diseño de UI, adaptable a celulares.</p>
+                        <ul class="tags">
+                            <li>HTML</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://christfersh.github.io/TheMasterTz.github.io/homepage.html" class="btn small" target="_blank" rel="noopener"><iconify-icon icon="fluent:open-24-regular" aria-hidden="true"></iconify-icon> Ver sitio web</a>
+                            <a href="https://github.com/ChristFersh/TheMasterTz.github.io" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <div class="image-placeholder code" aria-hidden="true">GET /api/users</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>API REST con TypeORM</h3>
+                        <p>API en TypeScript con Express y TypeORM sobre MySQL. Valida los datos que recibe con Zod antes de guardarlos.</p>
+                        <ul class="tags">
+                            <li>TypeScript</li>
+                            <li>Express</li>
+                            <li>TypeORM</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ChristFersh/ApiTypeOrm" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <div class="image-placeholder code" aria-hidden="true">POST /files</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Files Manager</h3>
+                        <p>Servicio para subir y consultar archivos con autenticación de usuarios, paginación y procesos en segundo plano.</p>
+                        <ul class="tags">
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ChristFersh/holbertonschool-files_manager" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <div class="image-placeholder code" aria-hidden="true">(hbnb) create User</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AirBnB Clone</h3>
+                        <p>Consola en Python para crear, guardar y consultar los objetos de un clon de AirBnB (usuarios, lugares y reseñas).</p>
+                        <ul class="tags">
+                            <li>Python</li>
+                            <li>POO</li>
+                            <li>JSON</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ChristFersh/AirBnB_clone" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="sistemas">
+                    <div class="project-image">
+                        <div class="image-placeholder code" aria-hidden="true">$ ./hsh</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Simple Shell</h3>
+                        <p>Intérprete de comandos al estilo Unix escrito en C. Ejecuta programas con fork, execve y wait.</p>
+                        <ul class="tags">
+                            <li>C</li>
+                            <li>Linux</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ChristFersh/simple_shell" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="sistemas">
+                    <div class="project-image">
+                        <div class="image-placeholder code" aria-hidden="true">_printf("%s", hola);</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>_printf</h3>
+                        <p>Versión propia de la función printf de C, con los especificadores %c, %s, %d, %i y %%.</p>
+                        <ul class="tags">
+                            <li>C</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ChristFersh/printf" class="btn small secondary" target="_blank" rel="noopener"><iconify-icon icon="fluent:code-24-regular" aria-hidden="true"></iconify-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2 class="footer-title">Contacto</h2>
+                <p><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></p>
+                <p><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> Cali, Colombia</p>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Enlaces</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Sígueme</h2>
+                <div class="social-icons">
+                    <a href="https://github.com/ChristFersh" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon></a>
+                    <a href="https://x.com/fersh_t" class="social-icon" target="_blank" rel="noopener" aria-label="X (Twitter)"><iconify-icon icon="ri:twitter-x-line" aria-hidden="true"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Christian Diaz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Web component de Iconify: convierte cada <iconify-icon> en un ícono -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.4/dist/iconify-icon.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
