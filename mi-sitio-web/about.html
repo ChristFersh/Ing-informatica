@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quién es Christian Diaz: formación, experiencia y herramientas.">
+    <title>Acerca de mí | Christian Diaz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Christian<span class="highlight">.</span>Diaz</a>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html" class="active">Acerca de</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro">
+                <iconify-icon id="theme-icon" icon="fluent:weather-moon-24-regular" aria-hidden="true"></iconify-icon>
+            </button>
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <iconify-icon id="menu-icon" icon="fluent:navigation-24-regular" aria-hidden="true"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Encabezado de la página -->
+        <section class="page-header">
+            <h1>Acerca de mí</h1>
+            <p>Mi formación, mi experiencia y las herramientas que uso.</p>
+        </section>
+
+        <!-- Presentación con foto -->
+        <section class="about-content">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="img/christian-diaz.webp" alt="Retrato de Christian Diaz mirando hacia un lado" width="1086" height="1448">
+                </div>
+
+                <div class="about-text">
+                    <h2>¡Hola, soy <span class="highlight">Christian</span>!</h2>
+                    <p>Me llamo Christian Fernando Diaz Bolaños. Soy desarrollador web con más de tres años de experiencia creando aplicaciones modernas y escalables.</p>
+                    <p>Trabajo sobre todo con Node.js (Express y NestJS), React, Next.js y Astro, y con bases de datos relacionales como MySQL y PostgreSQL.</p>
+                    <p>Busco que cada aplicación sea fácil de mantener, segura y capaz de crecer junto con el proyecto. Me gusta aprender tecnologías nuevas que mejoren la experiencia de quien usa lo que construyo.</p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h3>Educación</h3>
+                            <p><strong>Ingeniería Informática</strong> (en curso)</p>
+                            <p><strong>Holberton School</strong> — Ingeniería de software full stack</p>
+                        </div>
+                        <div class="detail-item">
+                            <h3>Experiencia</h3>
+                            <p><strong>Desarrollador Full Stack</strong> — Aestro (actualidad)</p>
+                            <p><strong>Proyectos personales</strong> — Infect Cozy y otros en GitHub</p>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn primary">Contáctame</a>
+                        <a href="https://github.com/ChristFersh" class="btn secondary" target="_blank" rel="noopener">Ver mi GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla con las herramientas que uso -->
+        <section class="tools">
+            <h2 class="section-title">Mis herramientas</h2>
+
+            <div class="table-wrapper">
+                <table class="tools-table">
+                    <caption>Tecnologías que uso según el área de trabajo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Área</th>
+                            <th scope="col">Tecnologías</th>
+                            <th scope="col">Para qué las uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Frontend</th>
+                            <td>HTML, CSS, JavaScript, React, Next.js, Astro</td>
+                            <td>Construir las páginas que ve el usuario</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Backend</th>
+                            <td>Node.js, Express, NestJS, TypeScript</td>
+                            <td>Crear APIs y la lógica del servidor</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Bases de datos</th>
+                            <td>PostgreSQL, MySQL, MongoDB, TypeORM</td>
+                            <td>Guardar y consultar información</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Herramientas</th>
+                            <td>Git, Docker, Linux, Python</td>
+                            <td>Versionar código, desplegar y automatizar tareas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Intereses -->
+        <section class="interests">
+            <h2 class="section-title">Mis intereses</h2>
+
+            <div class="interests-grid">
+                <article class="interest-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:code-24-regular"></iconify-icon></div>
+                    <h3>Desarrollo web</h3>
+                    <p>Crear interfaces modernas, rápidas y responsivas.</p>
+                </article>
+                <article class="interest-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:games-24-regular"></iconify-icon></div>
+                    <h3>Videojuegos y modding</h3>
+                    <p>Armar y mantener modpacks como Infect Cozy para jugar con amigos.</p>
+                </article>
+                <article class="interest-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:bot-24-regular"></iconify-icon></div>
+                    <h3>Inteligencia artificial</h3>
+                    <p>Explorar cómo la IA puede ayudar en productos reales.</p>
+                </article>
+                <article class="interest-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:wrench-24-regular"></iconify-icon></div>
+                    <h3>Automatización</h3>
+                    <p>Escribir scripts que hagan solas las tareas repetitivas.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2 class="footer-title">Contacto</h2>
+                <p><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></p>
+                <p><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> Cali, Colombia</p>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Enlaces</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Sígueme</h2>
+                <div class="social-icons">
+                    <a href="https://github.com/ChristFersh" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon></a>
+                    <a href="https://x.com/fersh_t" class="social-icon" target="_blank" rel="noopener" aria-label="X (Twitter)"><iconify-icon icon="ri:twitter-x-line" aria-hidden="true"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Christian Diaz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Web component de Iconify: convierte cada <iconify-icon> en un ícono -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.4/dist/iconify-icon.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
