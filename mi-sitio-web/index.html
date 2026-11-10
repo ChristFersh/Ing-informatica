@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos: información sobre la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Christian Diaz, desarrollador web full stack en Cali, Colombia.">
+    <title>Inicio | Christian Diaz</title>
+
+    <!-- Tipografía de Google Fonts para los títulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabecera: logo, menú de navegación y botones -->
+    <header>
+        <a href="index.html" class="logo">Christian<span class="highlight">.</span>Diaz</a>
+
+        <!-- Menú de navegación principal -->
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Botón para cambiar entre modo claro y oscuro -->
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro">
+                <iconify-icon id="theme-icon" icon="fluent:weather-moon-24-regular" aria-hidden="true"></iconify-icon>
+            </button>
+
+            <!-- Botón de menú (solo se ve en celulares) -->
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <iconify-icon id="menu-icon" icon="fluent:navigation-24-regular" aria-hidden="true"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de bienvenida (hero) -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hola, soy <span class="highlight">Christian Diaz</span></h1>
+                <p class="subtitle">Desarrollador Web Full Stack | Cali, Colombia</p>
+                <p>Creo aplicaciones web modernas con JavaScript y TypeScript: desde la interfaz que ve el usuario hasta la API y la base de datos que la sostienen.</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn primary">Ver proyectos</a>
+                    <a href="contact.html" class="btn secondary">Contactar</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="img/christian-diaz.webp" alt="Foto de Christian Diaz con traje negro" width="1086" height="1448">
+            </div>
+        </section>
+
+        <!-- Sección de servicios: lo que hago -->
+        <section class="services">
+            <h2 class="section-title">Lo que hago</h2>
+
+            <div class="services-container">
+                <!-- Tarjeta de servicio 1 -->
+                <article class="service-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:laptop-24-regular"></iconify-icon></div>
+                    <h3>Frontend</h3>
+                    <p>Interfaces con React, Next.js y Astro que se ven bien en cualquier pantalla.</p>
+                </article>
+
+                <!-- Tarjeta de servicio 2 -->
+                <article class="service-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:server-24-regular"></iconify-icon></div>
+                    <h3>Backend</h3>
+                    <p>APIs con Node.js, Express y NestJS, seguras y listas para crecer.</p>
+                </article>
+
+                <!-- Tarjeta de servicio 3 -->
+                <article class="service-card">
+                    <div class="icon-placeholder" aria-hidden="true"><iconify-icon icon="fluent:database-24-regular"></iconify-icon></div>
+                    <h3>Bases de datos</h3>
+                    <p>Modelado de datos en PostgreSQL y MySQL usando TypeORM.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de proyectos destacados -->
+        <section class="featured-projects">
+            <h2 class="section-title">Proyectos destacados</h2>
+
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/infect-cozy.webp" alt="Portada del modpack Infect Cozy: aldea de Minecraft infectada de noche" width="900" height="502">
+                    </div>
+                    <div class="project-info">
+                        <h3>Infect Cozy</h3>
+                        <p>Modpack de terror para Minecraft con su propia página de descargas, novedades y guía de juego.</p>
+                        <div class="project-links">
+                            <a href="https://christfersh.github.io/infectcozy-pack/" class="btn small" target="_blank" rel="noopener"><iconify-icon icon="fluent:open-24-regular" aria-hidden="true"></iconify-icon> Ver sitio web</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/smile-school.jpg" class="img-top" alt="Página de inicio de Smile School con el título Get schooled" width="800" height="600">
+                    </div>
+                    <div class="project-info">
+                        <h3>Smile School</h3>
+                        <p>Sitio de tres páginas maquetado con Bootstrap a partir de un diseño de UI.</p>
+                        <div class="project-links">
+                            <a href="https://christfersh.github.io/TheMasterTz.github.io/homepage.html" class="btn small" target="_blank" rel="noopener"><iconify-icon icon="fluent:open-24-regular" aria-hidden="true"></iconify-icon> Ver sitio web</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="center-button">
+                <a href="projects.html" class="btn primary">Ver todos los proyectos</a>
+            </div>
+        </section>
+
+        <!-- Sección de habilidades técnicas -->
+        <section class="skills">
+            <h2 class="section-title">Mis habilidades</h2>
+
+            <div class="skills-container">
+                <!-- Cada barra guarda su porcentaje en data-level; JavaScript la llena -->
+                <div class="skill">
+                    <div class="skill-name">
+                        <h3>HTML y CSS</h3>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <h3>JavaScript y TypeScript</h3>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <h3>Node.js (Express y NestJS)</h3>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <h3>React y Next.js</h3>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <h3>SQL (PostgreSQL y MySQL)</h3>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <!-- Información de contacto -->
+            <div class="footer-section">
+                <h2 class="footer-title">Contacto</h2>
+                <p><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></p>
+                <p><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> Cali, Colombia</p>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div class="footer-section">
+                <h2 class="footer-title">Enlaces</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-section">
+                <h2 class="footer-title">Sígueme</h2>
+                <div class="social-icons">
+                    <a href="https://github.com/ChristFersh" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon></a>
+                    <a href="https://x.com/fersh_t" class="social-icon" target="_blank" rel="noopener" aria-label="X (Twitter)"><iconify-icon icon="ri:twitter-x-line" aria-hidden="true"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Christian Diaz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript al final: así el HTML ya está cargado cuando se ejecuta -->
+    <!-- Web component de Iconify: convierte cada <iconify-icon> en un ícono -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.4/dist/iconify-icon.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
