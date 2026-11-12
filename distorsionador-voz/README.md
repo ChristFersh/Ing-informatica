@@ -3,6 +3,8 @@
 App web (Vite + React + shadcn/ui) que graba tu voz y la distorsiona con una función
 trigonométrica. Todo el cálculo corre en el navegador: el audio nunca sale del equipo.
 
+**Pruébala:** https://christfersh.github.io/distorsionador-voz/
+
 ## La función
 
 ```
@@ -64,6 +66,10 @@ pnpm test     # pruebas de la función, el WAV, el grabador, el motor de audio y
 ```
 
 El micrófono solo funciona en `localhost` o HTTPS.
+
+**Despliegue:** cada push a `main` corre `.github/workflows/deploy.yml`: instala con pnpm,
+corre las pruebas, compila (`base: './'` en Vite, para servir bajo `/distorsionador-voz/`) y
+publica `dist/` en GitHub Pages (HTTPS, así que el micrófono funciona).
 
 ## Flujo
 

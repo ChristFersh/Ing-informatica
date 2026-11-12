@@ -6,6 +6,8 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Rutas relativas: la app funciona servida en una subruta (GitHub Pages: /distorsionador-voz/).
+  base: './',
   plugins: [react(), tailwindcss()],
   server: {
     allowedHosts: ['.ngrok-free.dev', '.ngrok-free.app', '.ngrok.io'],
