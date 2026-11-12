@@ -7,8 +7,8 @@ export interface AnalyserLike extends AudioNodeLike {
   fftSize: number
   smoothingTimeConstant: number
   readonly frequencyBinCount: number
-  getByteFrequencyData(array: Uint8Array<ArrayBuffer>): void
-  getFloatTimeDomainData(array: Float32Array<ArrayBuffer>): void
+  getByteFrequencyData(array: Uint8Array): void
+  getFloatTimeDomainData(array: Float32Array): void
 }
 
 export interface PlayableLike {
@@ -37,6 +37,8 @@ export interface AudioEngine<E, S> {
   isPlaying(): boolean
 }
 
+type CreateContext<E, S> = () => AudioContextLike<E, S>
+
 /**
  * Enruta el audio hacia un único AnalyserNode que lee el fondo animado.
  *
@@ -46,9 +48,7 @@ export interface AudioEngine<E, S> {
  * El AudioContext se crea recién en el primer uso, que siempre ocurre tras un clic
  * (Grabar o ▶), porque los navegadores no dejan sonar un contexto creado antes.
  */
-export function createAudioEngine<E extends PlayableLike, S>(
-  createContext: () => AudioContextLike<E, S>,
-): AudioEngine<E, S> {
+export const createAudioEngine = <E extends PlayableLike, S>(createContext: CreateContext<E, S>): AudioEngine<E, S> => {
   let graph: { context: AudioContextLike<E, S>; analyser: AnalyserLike } | null = null
   let streamSource: AudioNodeLike | null = null
   // Un <audio> solo admite un createMediaElementSource en toda su vida: guardamos el nodo.

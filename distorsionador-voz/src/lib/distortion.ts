@@ -21,7 +21,8 @@ export interface DistortionParams {
   mix: number
 }
 
-function assertParams(sampleRate: number, { carrierHz, drive, mix }: DistortionParams): void {
+type AssertParams = (sampleRate: number, params: DistortionParams) => void
+const assertParams: AssertParams = (sampleRate, { carrierHz, drive, mix }) => {
   if (!Number.isFinite(sampleRate) || sampleRate <= 0) {
     throw new RangeError(`sampleRate debe ser > 0 (recibido ${sampleRate})`)
   }
@@ -36,8 +37,9 @@ function assertParams(sampleRate: number, { carrierHz, drive, mix }: DistortionP
   }
 }
 
+type DistortSample = (x: number, n: number, sampleRate: number, params: DistortionParams) => number
 /** Aplica la fórmula a una sola muestra x[n]. */
-export function distortSample(x: number, n: number, sampleRate: number, params: DistortionParams): number {
+export const distortSample: DistortSample = (x, n, sampleRate, params) => {
   const { carrierHz, drive, mix } = params
   if (mix === 0) return x
   const shaped = Math.sin(drive * x)
@@ -45,8 +47,9 @@ export function distortSample(x: number, n: number, sampleRate: number, params: 
   return (1 - mix) * x + mix * shaped * carrier
 }
 
+type DistortVoice = (input: Float32Array, sampleRate: number, params: DistortionParams) => Float32Array
 /** Aplica la fórmula a toda la grabación. Devuelve una señal nueva; no toca la original. */
-export function distortVoice(input: Float32Array, sampleRate: number, params: DistortionParams): Float32Array {
+export const distortVoice: DistortVoice = (input, sampleRate, params) => {
   assertParams(sampleRate, params)
   const output = new Float32Array(input.length)
   for (let n = 0; n < input.length; n++) {
