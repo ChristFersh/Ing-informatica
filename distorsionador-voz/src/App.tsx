@@ -30,6 +30,7 @@ export default function App() {
     let cancelled = false
     decodeRecording(source)
       .then((audio) => {
+
         if (!cancelled) setDecoded({ source, audio, error: null })
       })
       .catch(() => {
@@ -48,6 +49,7 @@ export default function App() {
 
   const distorted = useMemo(() => {
     if (!audio) return null
+
     const samples = distortVoice(audio.samples, audio.sampleRate, applied)
     return new Blob([encodeWav(samples, audio.sampleRate)], { type: 'audio/wav' })
   }, [audio, applied])
