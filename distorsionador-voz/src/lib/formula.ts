@@ -19,7 +19,8 @@ const brace = (tex: string, label: string) => `\\underbrace{${tex}}_{\\text{${la
  * Una sola fórmula que explica y aplica a la vez:
  *   y[n] = (1 − m)·x[n] + m·sin(k·x[n])·sin(2π·f·n / fs)
  * cada parte con su nombre debajo y cada parámetro con su valor actual encima
- * (redondeado como en el slider). En tres líneas para que quepa en el celular.
+ * (m como fracción con 2 decimales, k con 1 decimal, f entero).
+ * En tres líneas para que quepa en el celular.
  */
 export function formulaTex({ carrierHz, drive, mix }: DistortionParams, sampleRate: number | null): string {
   const m = withValue('mix', 'm', mix.toFixed(2))

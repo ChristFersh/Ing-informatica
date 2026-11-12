@@ -62,10 +62,18 @@ class FakeContext implements AudioContextLike<FakeElement, FakeStream> {
   }
 }
 
-function setup() {
+/** Safari: resume() puede rechazar (contexto 'interrupted', documento inactivo). */
+class RejectingContext extends FakeContext {
+  resume() {
+    this.resumeCalls++
+    return Promise.reject(new Error('resume() rechazado'))
+  }
+}
+
+function setup(createContext: () => FakeContext = () => new FakeContext()) {
   const contexts: FakeContext[] = []
   const engine = createAudioEngine(() => {
-    const context = new FakeContext()
+    const context = createContext()
     contexts.push(context)
     return context
   })
@@ -191,5 +199,16 @@ describe('createAudioEngine', () => {
     context().state = 'closed'
     engine.resume()
     expect(context().resumeCalls).toBe(2)
+  })
+
+  // Guarda (caracterización): sin el .catch de resume(), Vitest corta la corrida con "Unhandled Rejection".
+  it('si resume() rechaza, no deja una promesa rechazada sin manejar', async () => {
+    const { engine, context } = setup(() => new RejectingContext())
+
+    expect(() => engine.resume()).not.toThrow()
+    // Un turno del event loop: es cuando Node avisa de los rechazos que nadie manejó.
+    await new Promise((resolve) => setTimeout(resolve, 0))
+
+    expect(context().resumeCalls).toBe(1)
   })
 })
