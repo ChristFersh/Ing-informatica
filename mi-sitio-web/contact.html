@@ -1,139 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Escríbele a Christian Diaz.">
-    <title>Contacto | Christian Diaz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escríbele a Christian Diaz.">
+  <title>Contacto | Christian Diaz</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
-    <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Christian<span class="highlight">.</span>Diaz</a>
+  <header>
+    <a href="index.html" class="logo">Christian<span class="highlight">.</span>Diaz</a>
 
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="projects.html">Proyectos</a></li>
-                <li><a href="contact.html" class="active">Contacto</a></li>
-            </ul>
-        </nav>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="contact.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
 
-        <div class="header-actions">
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro">
-                <iconify-icon id="theme-icon" icon="fluent:weather-moon-24-regular" aria-hidden="true"></iconify-icon>
-            </button>
-            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-                <iconify-icon id="menu-icon" icon="fluent:navigation-24-regular" aria-hidden="true"></iconify-icon>
-            </button>
+    <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro">
+            <iconify-icon id="theme-icon" icon="fluent:weather-moon-24-regular" aria-hidden="true"></iconify-icon>
+        </button>
+        <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+            <iconify-icon id="menu-icon" icon="fluent:navigation-24-regular" aria-hidden="true"></iconify-icon>
+        </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+        <h1>Contacto</h1>
+        <p>¿Tienes una idea, una pregunta o un proyecto? Escríbeme.</p>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- Datos de contacto -->
+        <div class="contact-info">
+          <h2>Hablemos</h2>
+          <p>Respondo los mensajes lo antes posible. También me encuentras en mis redes.</p>
+          <ul class="contact-list">
+              <li><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <strong>Correo:</strong> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></li>
+              <li><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> <strong>Ciudad:</strong> Cali, Colombia</li>
+              <li><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon> <strong>GitHub:</strong> <a href="https://github.com/ChristFersh" target="_blank" rel="noopener">ChristFersh</a></li>
+              <li><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" target="_blank" rel="noopener">Christian Diaz</a></li>
+          </ul>
         </div>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <h1>Contacto</h1>
-            <p>¿Tienes una idea, una pregunta o un proyecto? Escríbeme.</p>
-        </section>
+        <!-- Formulario: "novalidate" desactiva la validación del navegador
+            para que la haga nuestro JavaScript -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <h2>Envíame un mensaje</h2>
 
-        <section class="contact-section">
-            <div class="contact-container">
-                <!-- Datos de contacto -->
-                <div class="contact-info">
-                    <h2>Hablemos</h2>
-                    <p>Respondo los mensajes lo antes posible. También me encuentras en mis redes.</p>
-                    <ul class="contact-list">
-                        <li><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <strong>Correo:</strong> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></li>
-                        <li><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> <strong>Ciudad:</strong> Cali, Colombia</li>
-                        <li><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon> <strong>GitHub:</strong> <a href="https://github.com/ChristFersh" target="_blank" rel="noopener">ChristFersh</a></li>
-                        <li><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" target="_blank" rel="noopener">Christian Diaz</a></li>
-                    </ul>
-                </div>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+            <small class="error-message" id="error-nombre"></small>
+          </div>
 
-                <!-- Formulario: "novalidate" desactiva la validación del navegador
-                    para que la haga nuestro JavaScript -->
-                <form class="contact-form" id="contact-form" novalidate>
-                    <h2>Envíame un mensaje</h2>
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+            <small class="error-message" id="error-correo"></small>
+          </div>
 
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
-                        <small class="error-message" id="error-nombre"></small>
-                    </div>
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto">
+              <option value="">Elige una opción</option>
+              <option value="proyecto">Quiero proponer un proyecto</option>
+              <option value="empleo">Oferta de trabajo</option>
+              <option value="otro">Otro tema</option>
+            </select>
+            <small class="error-message" id="error-asunto"></small>
+          </div>
 
-                    <div class="form-group">
-                        <label for="correo">Correo electrónico</label>
-                        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email">
-                        <small class="error-message" id="error-correo"></small>
-                    </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame en qué te puedo ayudar"></textarea>
+            <small class="error-message" id="error-mensaje"></small>
+          </div>
 
-                    <div class="form-group">
-                        <label for="asunto">Asunto</label>
-                        <select id="asunto" name="asunto">
-                            <option value="">Elige una opción</option>
-                            <option value="proyecto">Quiero proponer un proyecto</option>
-                            <option value="empleo">Oferta de trabajo</option>
-                            <option value="otro">Otro tema</option>
-                        </select>
-                        <small class="error-message" id="error-asunto"></small>
-                    </div>
+          <p class="form-note">Formulario de práctica: se valida con JavaScript y no envía datos a ningún servidor.</p>
 
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame en qué te puedo ayudar"></textarea>
-                        <small class="error-message" id="error-mensaje"></small>
-                    </div>
+          <button type="submit" class="btn primary"><iconify-icon icon="fluent:send-24-regular" aria-hidden="true"></iconify-icon> Enviar mensaje</button>
 
-                    <p class="form-note">Formulario de práctica: se valida con JavaScript y no envía datos a ningún servidor.</p>
+          <!-- Mensaje de éxito: oculto hasta que el formulario sea válido -->
+          <p class="form-success" id="form-success" hidden>
+              <iconify-icon icon="fluent:checkmark-circle-24-regular" aria-hidden="true"></iconify-icon>
+              <span id="success-text"></span>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-                    <button type="submit" class="btn primary"><iconify-icon icon="fluent:send-24-regular" aria-hidden="true"></iconify-icon> Enviar mensaje</button>
-
-                    <!-- Mensaje de éxito: oculto hasta que el formulario sea válido -->
-                    <p class="form-success" id="form-success" hidden>
-                        <iconify-icon icon="fluent:checkmark-circle-24-regular" aria-hidden="true"></iconify-icon>
-                        <span id="success-text"></span>
-                    </p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h2 class="footer-title">Contacto</h2>
-                <p><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></p>
-                <p><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> Cali, Colombia</p>
-            </div>
-            <div class="footer-section">
-                <h2 class="footer-title">Enlaces</h2>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about.html">Acerca de</a></li>
-                    <li><a href="projects.html">Proyectos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h2 class="footer-title">Sígueme</h2>
-                <div class="social-icons">
-                    <a href="https://github.com/ChristFersh" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon></a>
-                    <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon></a>
-                    <a href="https://x.com/fersh_t" class="social-icon" target="_blank" rel="noopener" aria-label="X (Twitter)"><iconify-icon icon="ri:twitter-x-line" aria-hidden="true"></iconify-icon></a>
-                </div>
-            </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h2 class="footer-title">Contacto</h2>
+        <p><iconify-icon icon="fluent:mail-24-regular" aria-hidden="true"></iconify-icon> <a href="mailto:christian.diaz.fts@gmail.com">christian.diaz.fts@gmail.com</a></p>
+        <p><iconify-icon icon="fluent:location-24-regular" aria-hidden="true"></iconify-icon> Cali, Colombia</p>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-title">Enlaces</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Acerca de</a></li>
+          <li><a href="projects.html">Proyectos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-title">Sígueme</h2>
+        <div class="social-icons">
+          <a href="https://github.com/ChristFersh" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><iconify-icon icon="ri:github-line" aria-hidden="true"></iconify-icon></a>
+          <a href="https://www.linkedin.com/in/christian-fernando-diaz-bola%C3%B1os/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><iconify-icon icon="ri:linkedin-box-line" aria-hidden="true"></iconify-icon></a>
+          <a href="https://x.com/fersh_t" class="social-icon" target="_blank" rel="noopener" aria-label="X (Twitter)"><iconify-icon icon="ri:twitter-x-line" aria-hidden="true"></iconify-icon></a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Christian Diaz. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+      </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Christian Diaz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-    <!-- Web component de Iconify: convierte cada <iconify-icon> en un ícono -->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.4/dist/iconify-icon.min.js"></script>
-    <script src="js/main.js"></script>
+  <!-- Web component de Iconify: convierte cada <iconify-icon> en un ícono -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.4/dist/iconify-icon.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
