@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Mapa de navegación de mi-sitio-web</title>
+  <desc>Mapa mental: el sitio en el centro, las 4 páginas como ramas y las secciones de cada página como hojas.</desc>
+
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#84441a"/>
+    </marker>
+    <style>
+      .rama { fill: none; stroke: #a3561f; stroke-width: 3; }
+      .hoja-linea { fill: none; stroke: #c9a689; stroke-width: 2; }
+      .hoja { fill: #ffffff; stroke: #e4dfd8; stroke-width: 1.5; }
+      .hoja-titulo { font-size: 15px; font-weight: 700; fill: #1f1d1b; }
+      .hoja-detalle { font-size: 12.5px; fill: #5f5a54; }
+      .pagina { fill: #a3561f; }
+      .pagina-nombre { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .pagina-archivo { font-size: 12.5px; fill: #f3e2d4; font-family: Menlo, Consolas, monospace; }
+      .salto { fill: none; stroke: #84441a; stroke-width: 2; stroke-dasharray: 7 6; }
+      .compartido { fill: none; stroke: #8a847d; stroke-width: 2; stroke-dasharray: 2 6; stroke-linecap: round; }
+      .nota { font-size: 13px; fill: #84441a; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Fondo propio: se ve igual con tema claro u oscuro de GitHub -->
+  <rect width="1600" height="1000" fill="#f6f4f1"/>
+
+  <!-- Título y leyenda -->
+  <text x="40" y="62" font-size="28" font-weight="700" fill="#1f1d1b">Mapa de navegación</text>
+  <text x="40" y="88" font-size="14" fill="#5f5a54">mi-sitio-web · 4 páginas y sus secciones</text>
+
+  <g transform="translate(1250 34)">
+    <rect x="0" y="0" width="310" height="92" rx="10" fill="#ffffff" stroke="#e4dfd8"/>
+    <line x1="16" y1="24" x2="64" y2="24" class="rama"/>
+    <text x="76" y="28" font-size="13" fill="#1f1d1b">Enlace del menú (header)</text>
+    <line x1="16" y1="48" x2="64" y2="48" class="salto"/>
+    <text x="76" y="52" font-size="13" fill="#1f1d1b">Botón que lleva a otra página</text>
+    <line x1="16" y1="72" x2="64" y2="72" class="compartido"/>
+    <text x="76" y="76" font-size="13" fill="#1f1d1b">Partes que comparten todas</text>
+  </g>
+
+  <!-- Ramas del centro a cada página (el menú) -->
+  <path class="rama" d="M800,500 C680,500 690,250 580,250"/>
+  <path class="rama" d="M800,500 C920,500 910,250 1020,250"/>
+  <path class="rama" d="M800,500 C680,500 690,750 580,750"/>
+  <path class="rama" d="M800,500 C920,500 910,750 1020,750"/>
+  <path class="compartido" d="M800,556 L800,848"/>
+
+  <!-- Saltos entre páginas con botones -->
+  <path class="salto" d="M480,288 L480,710" marker-end="url(#flecha)"/>
+  <text x="466" y="488" text-anchor="end" class="nota">«Ver proyectos»</text>
+  <text x="466" y="506" text-anchor="end" class="nota">«Ver todos los proyectos»</text>
+
+  <!-- Nodo central -->
+  <ellipse cx="800" cy="500" rx="150" ry="56" fill="#1f1d1b"/>
+  <text x="800" y="498" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Christian<tspan fill="#d98a4e">.</tspan>Diaz</text>
+  <text x="800" y="522" text-anchor="middle" font-size="13" fill="#cfc8bf">sitio web personal</text>
+
+  <!-- ================= INICIO (index.html) ================= -->
+  <path class="hoja-linea" d="M380,250 C340,250 340,151 300,151"/>
+  <path class="hoja-linea" d="M380,250 C340,250 340,217 300,217"/>
+  <path class="hoja-linea" d="M380,250 C340,250 340,283 300,283"/>
+  <path class="hoja-linea" d="M380,250 C340,250 340,349 300,349"/>
+
+  <rect class="pagina" x="380" y="213" width="200" height="74" rx="14"/>
+  <text x="480" y="246" text-anchor="middle" class="pagina-nombre">Inicio</text>
+  <text x="480" y="268" text-anchor="middle" class="pagina-archivo">index.html</text>
+
+  <rect class="hoja" x="40" y="125" width="260" height="52" rx="10"/>
+  <text x="56" y="147" class="hoja-titulo">Saludo y foto</text>
+  <text x="56" y="166" class="hoja-detalle">Botones → Proyectos · Contacto</text>
+
+  <rect class="hoja" x="40" y="191" width="260" height="52" rx="10"/>
+  <text x="56" y="213" class="hoja-titulo">Lo que hago</text>
+  <text x="56" y="232" class="hoja-detalle">Frontend · Backend · Bases de datos</text>
+
+  <rect class="hoja" x="40" y="257" width="260" height="52" rx="10"/>
+  <text x="56" y="279" class="hoja-titulo">Proyectos destacados</text>
+  <text x="56" y="298" class="hoja-detalle">Infect Cozy · Smile School</text>
+
+  <rect class="hoja" x="40" y="323" width="260" height="52" rx="10"/>
+  <text x="56" y="345" class="hoja-titulo">Mis habilidades</text>
+  <text x="56" y="364" class="hoja-detalle">Barras animadas con JavaScript</text>
+
+  <!-- ================= ACERCA DE (about.html) ================= -->
+  <path class="hoja-linea" d="M1220,250 C1260,250 1260,184 1300,184"/>
+  <path class="hoja-linea" d="M1220,250 C1260,250 1260,250 1300,250"/>
+  <path class="hoja-linea" d="M1220,250 C1260,250 1260,316 1300,316"/>
+
+  <rect class="pagina" x="1020" y="213" width="200" height="74" rx="14"/>
+  <text x="1120" y="246" text-anchor="middle" class="pagina-nombre">Acerca de</text>
+  <text x="1120" y="268" text-anchor="middle" class="pagina-archivo">about.html</text>
+
+  <rect class="hoja" x="1300" y="158" width="260" height="52" rx="10"/>
+  <text x="1316" y="180" class="hoja-titulo">Biografía</text>
+  <text x="1316" y="199" class="hoja-detalle">Educación · Experiencia</text>
+
+  <rect class="hoja" x="1300" y="224" width="260" height="52" rx="10"/>
+  <text x="1316" y="246" class="hoja-titulo">Mis herramientas</text>
+  <text x="1316" y="265" class="hoja-detalle">Tabla: área · tecnologías · uso</text>
+
+  <rect class="hoja" x="1300" y="290" width="260" height="52" rx="10"/>
+  <text x="1316" y="312" class="hoja-titulo">Mis intereses</text>
+  <text x="1316" y="331" class="hoja-detalle">Web · Videojuegos · IA · Automatización</text>
+
+  <!-- ================= PROYECTOS (projects.html) ================= -->
+  <path class="hoja-linea" d="M380,750 C340,750 340,651 300,651"/>
+  <path class="hoja-linea" d="M380,750 C340,750 340,717 300,717"/>
+  <path class="hoja-linea" d="M380,750 C340,750 340,783 300,783"/>
+  <path class="hoja-linea" d="M380,750 C340,750 340,849 300,849"/>
+
+  <rect class="pagina" x="380" y="713" width="200" height="74" rx="14"/>
+  <text x="480" y="746" text-anchor="middle" class="pagina-nombre">Proyectos</text>
+  <text x="480" y="768" text-anchor="middle" class="pagina-archivo">projects.html</text>
+
+  <rect class="hoja" x="40" y="625" width="260" height="52" rx="10"/>
+  <text x="56" y="647" class="hoja-titulo">Filtro por categoría</text>
+  <text x="56" y="666" class="hoja-detalle">Todos · Web · Backend · Sistemas (C)</text>
+
+  <rect class="hoja" x="40" y="691" width="260" height="52" rx="10"/>
+  <text x="56" y="713" class="hoja-titulo">Web</text>
+  <text x="56" y="732" class="hoja-detalle">Infect Cozy · Smile School</text>
+
+  <rect class="hoja" x="40" y="757" width="260" height="52" rx="10"/>
+  <text x="56" y="779" class="hoja-titulo">Backend</text>
+  <text x="56" y="798" class="hoja-detalle">API REST · Files Manager · AirBnB</text>
+
+  <rect class="hoja" x="40" y="823" width="260" height="52" rx="10"/>
+  <text x="56" y="845" class="hoja-titulo">Sistemas (C)</text>
+  <text x="56" y="864" class="hoja-detalle">Simple Shell · _printf</text>
+
+  <!-- ================= CONTACTO (contact.html) ================= -->
+  <path class="hoja-linea" d="M1220,750 C1260,750 1260,717 1300,717"/>
+  <path class="hoja-linea" d="M1220,750 C1260,750 1260,783 1300,783"/>
+
+  <rect class="pagina" x="1020" y="713" width="200" height="74" rx="14"/>
+  <text x="1120" y="746" text-anchor="middle" class="pagina-nombre">Contacto</text>
+  <text x="1120" y="768" text-anchor="middle" class="pagina-archivo">contact.html</text>
+
+  <rect class="hoja" x="1300" y="691" width="260" height="52" rx="10"/>
+  <text x="1316" y="713" class="hoja-titulo">Hablemos</text>
+  <text x="1316" y="732" class="hoja-detalle">Correo · ubicación · redes</text>
+
+  <rect class="hoja" x="1300" y="757" width="260" height="52" rx="10"/>
+  <text x="1316" y="779" class="hoja-titulo">Formulario validado</text>
+  <text x="1316" y="798" class="hoja-detalle">Nombre · correo · asunto · mensaje</text>
+
+  <!-- ================= COMPARTIDO EN LAS 4 PÁGINAS ================= -->
+  <rect x="560" y="848" width="480" height="112" rx="12" fill="#ffffff" stroke="#8a847d" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="800" y="878" text-anchor="middle" font-size="16" font-weight="700" fill="#1f1d1b">En las 4 páginas</text>
+  <text x="584" y="906" font-size="13.5" fill="#1f1d1b"><tspan font-weight="700">Header:</tspan> logo · menú (☰ en celular) · modo oscuro</text>
+  <text x="584" y="934" font-size="13.5" fill="#1f1d1b"><tspan font-weight="700">Footer:</tspan> Contacto · Enlaces · Sígueme (GitHub, LinkedIn, X)</text>
+</svg>

@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Aplica el tema recibido: 'oscuro' o 'claro'
   function aplicarTema(tema) {
+    if (!tema) {
+      const temaNavegador = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
+      tema = temaNavegador;
+    }
+
     if (tema === 'oscuro') {
       document.body.classList.add('dark-mode');
       iconoTema.setAttribute('icon', 'fluent:weather-sunny-24-regular');
