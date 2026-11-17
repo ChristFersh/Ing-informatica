@@ -15,10 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (estaAbierto) {
       iconoMenu.setAttribute('icon', 'fluent:dismiss-24-regular');
       botonMenu.setAttribute('aria-label', 'Cerrar menú');
-    } else {
-      iconoMenu.setAttribute('icon', 'fluent:navigation-24-regular');
-      botonMenu.setAttribute('aria-label', 'Abrir menú');
+
+      return;
     }
+
+    iconoMenu.setAttribute('icon', 'fluent:navigation-24-regular');
+    botonMenu.setAttribute('aria-label', 'Abrir menú');
   }
 
   botonMenu.addEventListener('click', alternarMenu);
@@ -34,11 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('dark-mode');
       iconoTema.setAttribute('icon', 'fluent:weather-sunny-24-regular');
       botonTema.setAttribute('aria-label', 'Activar modo claro');
-    } else {
-      document.body.classList.remove('dark-mode');
-      iconoTema.setAttribute('icon', 'fluent:weather-moon-24-regular');
-      botonTema.setAttribute('aria-label', 'Activar modo oscuro');
+
+      return;
     }
+
+    document.body.classList.remove('dark-mode');
+    iconoTema.setAttribute('icon', 'fluent:weather-moon-24-regular');
+    botonTema.setAttribute('aria-label', 'Activar modo oscuro');
   }
 
   // Cambia al tema contrario y lo guarda para las otras páginas
